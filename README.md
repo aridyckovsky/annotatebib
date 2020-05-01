@@ -7,10 +7,6 @@ content of sources instead of formatting.
 
 LaTeX2e is installed and configured on your local machine.
 
-### Potential Early Errors
-
-When first installed, 
-
 ## Installation
 
 Two options are available for installation:
