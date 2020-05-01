@@ -48,8 +48,11 @@ git push --set-upstream origin master
 
 ## Usage
 
-First, navigate to the project root directory. In here, run `make all`. This
-should generate a series of printed statements followed by a final statement
+### First-Time Setup
+
+Navigate to the project root directory. Run `make all`.
+
+This should generate a series of printed statements followed by a final statement
 that looks like
 
 ```
@@ -66,14 +69,23 @@ work, see the following list of errors and solutions:
 denied` sort of statement related to the shell script `screen.sh`, then run
 `sudo chmod u+r+x .build_scripts/screen.sh`.
 
-## Editing the BibTex file
+### Generating output after revisions
+
+After you've edited your `.tex` and `.bib` files, the new information will not
+be reflected in your output until `make all` is run again.
+
+### Cleaning your project
+
+To clean out `.build` and `output` (folders of generated content), run `make clean`. 
+
+## Editing the main `.bib` file
 
 Your bibliography is only as strong as the information its given. To do this,
 edit  `references.bib`. Alternatively, if you use Mendley or another references
 organizer, export your set of references directly to `references.bib` and
 overwrite the file.
 
-### Adding Your Annotations and Citations
+## Editing the main `.tex` document file
 
 As you'll find in `main.tex`, the annotated items are individually called with
 
