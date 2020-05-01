@@ -1,9 +1,9 @@
 % Main Document File
-% Drafted 04/29/2020 by Ari Dyckovsky
+% Drafted 05/01/2020 by Ari Dyckovsky
 
 % Document Class Definition
-\documentclass[11pt,a4paper]{article}
-\usepackage[margin=0.5in]{geometry}
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1.0in]{geometry}
 
 \usepackage[english]{babel}
 \usepackage{csquotes}
@@ -18,28 +18,43 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
+% Provide adjustwidth environment
+\usepackage{changepage}
+
 % Packages
 % Add 'non-essential' packages here
-
-% Commands, new and renewed
+\usepackage{blindtext}
 
 % Title, Author, and Date of document
 
-\title{Title of Article} % Put your title
-\author{Ari Dyckovsky} % Put your name
+\title{Annotated Bibliography} % Put your title
+\author{Name Here} % Put your name
 \date{\today} % Customize or default to today's date
+
+% Force paragraph skip space
+\setlength{\parskip}{1em}
 
 \begin{document}
 
 \maketitle
 
-\section{Hello}
+% This is a single entry full citation, followed by
+% a single annotation paragraph
+\hangindent=0.5in \fullcite{Bechara1997}
 
-How is the world today?
+\begin{adjustwidth}{1in}{1in}
+  \blindtext % replace with true annotation text
+\end{adjustwidth}
 
-\printbibliography[
-  title={References} % Rename if desired
-]
+% This is a single entry full citation, followed by
+% a single annotation paragraph
+\hangindent=0.5in \fullcite{Tversky1981}
+
+\begin{adjustwidth}{1in}{1in}
+  \blindtext % replace with true annotation text
+\end{adjustwidth}
+
+% Add more!
 
 \end{document}
 
