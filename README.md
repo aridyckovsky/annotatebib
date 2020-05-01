@@ -11,13 +11,13 @@ LaTeX2e is installed and configured on your local machine.
 
 Two options are available for installation:
 
-### "Use this template" on GitHub (Preferred)
+### 1. "Use this template" on GitHub (Preferred)
 
 Simply click the green button "Use this template" and follow the steps outlined
 by GitHub. This will provide the same structure and set of files and begin
 a new git tree.
 
-### Clone the repo for an actual annotated bibliography
+### 2. Clone the repo for an actual annotated bibliography
 
 To clone the repository, run the following commands, where `new_name` is the name of the
 project you intend to annotate:
@@ -62,20 +62,18 @@ text (randomly generated statements). If this worked, you're ready to start
 adapting the boilerplate to your own annotation needs! In case this did not
 work, see the following list of errors and solutions:
 
-#### Permission Denied Error
-
-If an error is returned related to your `Makefile`, such as a `Permission
+- **Permission Denied** If an error is returned related to your `Makefile`, such as a `Permission
 denied` sort of statement related to the shell script `screen.sh`, then run
 `sudo chmod u+r+x .build_scripts/screen.sh`.
 
-### Editing the BibTex file
+## Editing the BibTex file
 
 Your bibliography is only as strong as the information its given. To do this,
 edit  `references.bib`. Alternatively, if you use Mendley or another references
 organizer, export your set of references directly to `references.bib` and
 overwrite the file.
 
-### Annotations and Citations
+### Adding Your Annotations and Citations
 
 As you'll find in `main.tex`, the annotated items are individually called with
 
