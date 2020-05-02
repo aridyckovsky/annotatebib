@@ -1,10 +1,13 @@
 % Main Document File
 % Drafted 05/01/2020 by Ari Dyckovsky
 
-% Document Class Definition
-\documentclass[12pt,a4paper]{article}
-\usepackage[margin=1.0in]{geometry}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
+\documentclass[12pt,a4paper,nobiblatex]{annotatebib}
+
+\usepackage[margin=1.0in]{geometry}
 \usepackage[english]{babel}
 \usepackage{csquotes}
 
@@ -13,17 +16,12 @@
 
 % Bibliography management via Biblatex and Biber
 \usepackage[
-  backend=biber,
   style=apa,
 ]{biblatex}
 \addbibresource{references.bib}
 
-% Provide adjustwidth environment
-\usepackage{changepage}
-
 % Packages
 % Add 'non-essential' packages here
-\usepackage{blindtext}
 
 % Title, Author, and Date of document
 
@@ -39,20 +37,16 @@
 \maketitle
 
 % This is a single entry full citation, followed by
-% a single annotation paragraph
-\hangindent=0.5in \fullcite{Bechara1997}
-
-\begin{adjustwidth}{1in}{1in}
+% a single annotation paragraph. The first two options
+% are: hangindent (i.e., 0.5in) and document symmetric gutters for
+% the annotation text (i.e., 1.0in on both sides)
+\annotatedcite{0.5in}{1.0in}{Bechara1997}{
   \blindtext % replace with true annotation text
-\end{adjustwidth}
+}
 
-% This is a single entry full citation, followed by
-% a single annotation paragraph
-\hangindent=0.5in \fullcite{Tversky1981}
-
-\begin{adjustwidth}{1in}{1in}
+\annotatedcite{0.5in}{1.0in}{Tversky1981}{
   \blindtext % replace with true annotation text
-\end{adjustwidth}
+}
 
 % Add more!
 

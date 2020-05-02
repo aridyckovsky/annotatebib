@@ -90,11 +90,9 @@ overwrite the file.
 As you'll find in `main.tex`, the annotated items are individually called with
 
 ```
-\hangindent=0.5in \fullcite{Bechara1997}
- 
-\begin{adjustwidth}{1in}{1in}
+\annotatedcite{0.5in}{1.0in}{Bechara1997}{
   \blindtext % replace with true annotation text
-\end{adjustwidth}   
+}
 ```
 
 where "Bechara1997" is the citation reference in your BibTex file
